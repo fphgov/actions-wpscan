@@ -1,0 +1,25 @@
+name: 'actions-wpscan'
+description: 'WPScan github action operator'
+author: 'PeterHallgato'
+branding:
+  color: 'blue'
+  icon: 'alert-triangle'
+inputs:
+  wp_url:
+    description: "Wordpress site url"
+    required: true 
+  wpscan_enumerate:
+    description: "WPScan enumerate"
+    required: false
+  wpscan_stealthy:
+    description: "WPScan is stealthy"
+    required: false
+  wpscan_plugins_detection:
+    description: "WPScan plugins detection"
+    required: false
+  wpscan_api_token:
+    description: "WPScan api token"
+    required: false
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
